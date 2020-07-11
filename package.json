@@ -7,7 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "fire": "ng build && firebase deploy --only hosting",
+    "fire-prod": "ng build --prod && firebase deploy --only hosting",
+    "commit": "git add . && git commit -am '...'",
+    "push": "npm run commit && git push -u origin master",
+    "git-fire": "npm run fire && npm push",
+    "git-fire-prod": "npm run fire-prod && npm push"
   },
   "private": true,
   "dependencies": {

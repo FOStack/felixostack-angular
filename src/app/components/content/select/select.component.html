@@ -14,13 +14,13 @@
   <div class="card card-small" (click)="selection.value = 'material'" tabindex="0">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
 
-    <span>Find Running Window</span>
+    <span>Switch Running Application</span>
   </div>
 
   <div class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
     <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
 
-    <span>Build App</span>
+    <span>Swith Open Tabs</span>
   </div>
 
   <!-- <div class="card card-small" (click)="selection.value = 'test'" tabindex="0">
@@ -39,9 +39,9 @@
 
 <!-- Terminal -->
 <div style="margin: auto;" class="terminal" [ngSwitch]="selection.value">
-  <pre *ngSwitchDefault>press: win + direction (any)</pre>
+  <pre *ngSwitchDefault>press: win + arrow up, downn, left, right</pre>
   <pre *ngSwitchCase="'material'">hold: alt + tab</pre>
-  <pre *ngSwitchCase="'dependency'">ng add _____</pre>
+  <pre *ngSwitchCase="'dependency'">press: ctrl + tab</pre>
   <pre *ngSwitchCase="'test'">ng test</pre>
   <pre *ngSwitchCase="'build'">ng build --prod</pre>
 </div>
