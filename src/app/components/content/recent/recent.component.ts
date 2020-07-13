@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from 'src/app/services/utl/modal.service';
+import { AppViewComponent } from '../../modal/app-view/app-view.component';
 
 @Component({
   selector: 'app-recent',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modal: ModalService) { }
 
   ngOnInit() {
+  }
+
+
+
+  openApp(url) {
+    this.modal.open({
+      component: AppViewComponent,
+      height: '580px',
+      width: '400px',
+      data: { url: url },
+      panelClass: 'app-view'
+    });
   }
 
 }

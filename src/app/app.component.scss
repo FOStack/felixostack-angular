@@ -295,15 +295,3 @@ svg#clouds {
   }
 }
 // </style>
-
-
-
-.call:not(.highlight-card) {
-  cursor: pointer;
-}
-
-.call:hover {
-  // transform: scale(1.25);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(black, 0.35);
-}
