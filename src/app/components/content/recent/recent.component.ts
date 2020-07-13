@@ -16,12 +16,12 @@ export class RecentComponent implements OnInit {
 
 
 
-  openApp(url) {
+  openApp(url?) {
     this.modal.open({
       component: AppViewComponent,
       height: '580px',
       width: '400px',
-      data: { url: url },
+      data: { url: url||null },
       panelClass: 'app-view'
     });
   }

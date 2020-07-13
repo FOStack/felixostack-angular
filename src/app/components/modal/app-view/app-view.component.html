@@ -20,19 +20,19 @@ style="position: absolute; right: calc((100vw - 360px)/2 - 50px);"
     
     <div
     *ngIf="loading" 
-    style="text-align: center;"
+    style="text-align: center; 
+    margin-top: 55%"
     >
         <mat-progress-spinner 
         mode="indeterminate"
         color="medium"
+        *ngIf="url"
         style="
         margin: auto; 
-        text-align: center; 
-        vertical-align: middle;
-        margin-top: 60%"
+        text-align: center;"
         ></mat-progress-spinner>
         <h4 style="margin: 25px;">
-            Loading App...
+            {{loadingText}}
         </h4>
     </div>
 </div>
